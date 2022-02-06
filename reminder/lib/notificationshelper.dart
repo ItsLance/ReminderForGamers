@@ -23,5 +23,12 @@ Future<void> initNotifications(
         notifsPlugin) async {
   var initializationSettingsAndroid =
       notifs.AndroidInitializationSettings('app_icon');
-  var initializationSettings = notifs.InitializationSettings(
-      initializationSettingsAndroid);
+  var initializationSettingsIOS = notifs.IOSInitializationSettings(
+      requestAlertPermission: false,
+      requestBadgePermission: false,
+      requestSoundPermission: false,
+      onDidReceiveLocalNotification:
+          (int id, String title, String body, String payload) async {
+        didReceiveLocalNotificationSubject
+            .add(NotificationClass(id: id, title: title, body: body, payload: payload));
+      });
