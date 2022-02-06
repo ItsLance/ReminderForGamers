@@ -17,3 +17,10 @@ final rxSub.BehaviorSubject<NotificationClass>
 
 final rxSub.BehaviorSubject<String> selectNotificationSubject =
     rxSub.BehaviorSubject<String>();
+
+Future<void> initNotifications(
+    notifs.FlutterLocalNotificationsPlugin
+        notifsPlugin) async {
+  var initializationSettingsAndroid =
+      notifs.AndroidInitializationSettings('app_icon');
+)};
