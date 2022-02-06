@@ -32,3 +32,5 @@ Future<void> initNotifications(
         didReceiveLocalNotificationSubject
             .add(NotificationClass(id: id, title: title, body: body, payload: payload));
       });
+      var initializationSettings = notifs.InitializationSettings(
+      initializationSettingsAndroid, initializationSettingsIOS);
