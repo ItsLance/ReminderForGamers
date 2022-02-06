@@ -10,3 +10,10 @@ class NotificationClass {
 
   NotificationClass({this.id, this.body, this.payload, this.title});
 }
+
+final rxSub.BehaviorSubject<NotificationClass>
+    didReceiveLocalNotificationSubject =
+    rxSub.BehaviorSubject<NotificationClass>();
+
+final rxSub.BehaviorSubject<String> selectNotificationSubject =
+    rxSub.BehaviorSubject<String>();
