@@ -23,8 +23,5 @@ Future<void> initNotifications(
         notifsPlugin) async {
   var initializationSettingsAndroid =
       notifs.AndroidInitializationSettings('app_icon');
-   var initializationSettingsIOS = notifs.IOSInitializationSettings(
-      requestAlertPermission: false,
-      requestBadgePermission: false,
-      requestSoundPermission: false,)
-)};
+  var initializationSettings = notifs.InitializationSettings(
+      initializationSettingsAndroid);
